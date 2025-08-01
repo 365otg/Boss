@@ -17,19 +17,15 @@
         .gold-text {
             color: #FBBF24; /* amber-400 */
         }
-        .gold-bg {
-            background-color: #FBBF24; /* amber-400 */
-        }
     </style>
 </head>
-<body>
+<body class="bg-black">
 
     <!-- Header -->
-    <header id="header" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+    <header id="header" class="bg-black/50 backdrop-blur-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-3xl font-black tracking-wider gold-text">B.O.S.S.</a>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-300 hover:gold-text transition-colors">About</a>
                 <a href="#contact" class="text-gray-300 hover:gold-text transition-colors">Contact</a>
             </div>
             <a href="#contact" class="hidden md:inline-block bg-amber-400 text-gray-900 font-bold py-2 px-6 rounded-lg hover:bg-amber-300 transition-colors">
@@ -41,7 +37,6 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 text-gray-300 hover:gold-text transition-colors">About</a>
             <a href="#contact" class="block py-2 text-gray-300 hover:gold-text transition-colors">Contact</a>
             <a href="#contact" class="block mt-2 text-center bg-amber-400 text-gray-900 font-bold py-2 px-6 rounded-lg hover:bg-amber-300 transition-colors">Get Involved</a>
         </div>
@@ -49,19 +44,30 @@
 
     <main>
         <!-- Main Attraction Video Section -->
-        <section id="home" class="py-12 md:py-20 bg-black">
+        <section id="home" class="py-12 md:py-20">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+                <!-- Headline with adjusted size to fit on one line -->
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
                     <span class="gold-text">B</span>usiness <span class="gold-text">o</span>f <span class="gold-text">S</span>ports <span class="gold-text">S</span>ystems
                 </h1>
                  <p class="mt-2 mb-8 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
                     Transforming passion for sports into meaningful careers beyond the game.
                 </p>
-                <div class="max-w-4xl mx-auto aspect-video shadow-2xl shadow-amber-400/10">
+                <!-- Video container now takes full width of the parent container -->
+                <div class="w-full mx-auto aspect-video shadow-2xl shadow-amber-400/20">
+                    <!-- 
+                        The iframe src has been updated for a modern, seamless experience:
+                        - autoplay=1: Starts the video automatically (requires mute=1).
+                        - mute=1: Mutes the video on start.
+                        - loop=1&playlist=...: Loops the video continuously.
+                        - controls=0: Hides the default YouTube player controls for a sleek look.
+                        - rel=0: Prevents related videos from showing.
+                        - modestbranding=1: Reduces YouTube logo visibility.
+                    -->
                     <iframe 
                         class="w-full h-full rounded-xl" 
-                        src="https://www.youtube.com/embed/I-P4naoKtlM?rel=0" 
-                        title="YouTube video player" 
+                        src="https://www.youtube.com/embed/I-P4naoKtlM?autoplay=1&mute=1&loop=1&playlist=I-P4naoKtlM&controls=0&rel=0&modestbranding=1&showinfo=0" 
+                        title="B.O.S.S. Program Introduction" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
@@ -70,25 +76,8 @@
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-20 md:py-32 bg-gray-800">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-                    <div class="md:w-1/2">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">A Program <span class="gold-text">Unlike Any Other</span></h2>
-                        <p class="text-gray-300 mb-4">B.O.S.S. (Business of Sports Systems) is a one-of-a-kind program created to help student-athletes transform their passion for sports into meaningful careers beyond high school, extending far beyond just being a player.</p>
-                        <p class="text-gray-300 mb-4">Through workshops, discussions, and visits to local and regional sites, students explore a variety of career paths within the sports industry, gaining firsthand exposure to high-level roles and professional opportunities.</p>
-                        <p class="text-gray-300">This program capitalizes on the strong network built by the executive team at Coach Shep’s, connecting participants with professional athletes, Division I, II, and III players and coaches, athletic directors, communications professionals, agents, and more.</p>
-                    </div>
-                    <div class="md:w-1/2">
-                        <img src="http://googleusercontent.com/file_content/4" alt="Coach Shep with graduates" class="rounded-2xl shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FBBF24?text=B.O.S.S.+Success';">
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-32">
+        <section id="contact" class="py-20 md:py-32 bg-gray-900">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold">Ready to Build Your Future in Sports?</h2>
                 <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Connect with Coach Shep's to learn more about the B.O.S.S. program and how you can get involved.</p>
@@ -99,20 +88,39 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <p>&copy; 2025 Coach Shep's & The B.O.S.S. Program. All Rights Reserved.</p>
-            <p class="text-sm mt-2">Designed to Empower the Next Generation of Sports Professionals.</p>
-        </div>
-    </footer>
+    <!-- The footer has been removed as requested -->
 
     <script>
         // --- Mobile Menu ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a, #header a');
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Close mobile menu when a link is clicked ---
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the mobile menu is open before trying to close it
+                if (!mobileMenu.classList.contains('hidden')) {
+                    // Only close for links that navigate, not the main B.O.S.S. logo
+                    if(link.href.includes('#')) {
+                       mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // --- Close mobile menu when clicking outside of it ---
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnButton = mobileMenuButton.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnButton && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
         });
     </script>
 </body>
