@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.O.S.S. Program Media Hub | Coach Shep's</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+            color: #F9FAFB; /* text-gray-50 */
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('http://googleusercontent.com/file_content/3');
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-text {
+            color: #FBBF24; /* amber-400 */
+        }
+        .gold-bg {
+            background-color: #FBBF24; /* amber-400 */
+        }
+        .gold-border {
+            border-color: #FBBF24; /* amber-400 */
+        }
+        .card-hover {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.1), 0 10px 10px -5px rgba(251, 191, 36, 0.08);
+        }
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        .filter-btn.active {
+            background-color: #FBBF24;
+            color: #111827;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header" class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-black tracking-wider gold-text">B.O.S.S.</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-300 hover:gold-text transition-colors">About</a>
+                <a href="#media-hub" class="text-gray-300 hover:gold-text transition-colors">Media Hub</a>
+                <a href="#events" class="text-gray-300 hover:gold-text transition-colors">Events</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-block bg-amber-400 text-gray-900 font-bold py-2 px-6 rounded-lg hover:bg-amber-300 transition-colors">
+                Get Involved
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300 hover:gold-text transition-colors">About</a>
+            <a href="#media-hub" class="block py-2 text-gray-300 hover:gold-text transition-colors">Media Hub</a>
+            <a href="#events" class="block py-2 text-gray-300 hover:gold-text transition-colors">Events</a>
+            <a href="#contact" class="block mt-2 text-center bg-amber-400 text-gray-900 font-bold py-2 px-6 rounded-lg hover:bg-amber-300 transition-colors">Get Involved</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg min-h-[60vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
+                    <span class="gold-text">B</span>usiness <span class="gold-text">o</span>f <span class="gold-text">S</span>ports <span class="gold-text">S</span>ystems
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                    Transforming passion for sports into meaningful careers beyond the game.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">A Program <span class="gold-text">Unlike Any Other</span></h2>
+                        <p class="text-gray-300 mb-4">B.O.S.S. (Business of Sports Systems) is a one-of-a-kind program created to help student-athletes transform their passion for sports into meaningful careers beyond high school, extending far beyond just being a player.</p>
+                        <p class="text-gray-300 mb-4">Through workshops, discussions, and visits to local and regional sites, students explore a variety of career paths within the sports industry, gaining firsthand exposure to high-level roles and professional opportunities.</p>
+                        <p class="text-gray-300">This program capitalizes on the strong network built by the executive team at Coach Shep’s, connecting participants with professional athletes, Division I, II, and III players and coaches, athletic directors, communications professionals, agents, and more.</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="http://googleusercontent.com/file_content/4" alt="Coach Shep with graduates" class="rounded-2xl shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FBBF24?text=B.O.S.S.+Success';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Hub Section -->
+        <section id="media-hub" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Media <span class="gold-text">Hub</span></h2>
+                    <p class="mt-2 text-lg text-gray-400">The latest updates from the B.O.S.S. Program.</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div id="filter-buttons" class="flex justify-center flex-wrap gap-4 mb-12">
+                    <button class="filter-btn active py-2 px-6 rounded-lg font-semibold transition-colors border-2 border-amber-400" data-filter="all">All</button>
+                    <button class="filter-btn py-2 px-6 rounded-lg font-semibold transition-colors border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-gray-900" data-filter="image">Images</button>
+                    <button class="filter-btn py-2 px-6 rounded-lg font-semibold transition-colors border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-gray-900" data-filter="video">Videos</button>
+                    <button class="filter-btn py-2 px-6 rounded-lg font-semibold transition-colors border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-gray-900" data-filter="event">Events</button>
+                </div>
+
+                <!-- Media Grid -->
+                <div id="media-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1: Image -->
+                    <div class="media-item card-hover" data-category="image">
+                        <div class="bg-gray-800 rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal(this)">
+                            <img src="http://googleusercontent.com/file_content/2" alt="Workshop with Coach Shep" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FBBF24?text=Image';">
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg">Engaging Workshops</h3>
+                                <p class="text-sm text-gray-400">Hands-on learning sessions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2: Video -->
+                    <div class="media-item card-hover" data-category="video">
+                        <div class="bg-gray-800 rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal(this, true)">
+                            <div class="relative">
+                                <img src="https://placehold.co/600x400/111827/FBBF24?text=Video+Highlight" alt="Video highlight thumbnail" class="w-full h-64 object-cover">
+                                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white/80 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg">Program Highlights Reel</h3>
+                                <p class="text-sm text-gray-400">A look into the B.O.S.S. experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Item 3: Event Image -->
+                    <div class="media-item card-hover" data-category="event">
+                        <div class="bg-gray-800 rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal(this)">
+                            <img src="http://googleusercontent.com/file_content/3" alt="Notre Dame Trip" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FBBF24?text=Event';">
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg">Notre Dame University Visit</h3>
+                                <p class="text-sm text-gray-400">Exploring collegiate athletics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4: Image -->
+                    <div class="media-item card-hover" data-category="image">
+                        <div class="bg-gray-800 rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal(this)">
+                            <img src="http://googleusercontent.com/file_content/5" alt="Speaking Engagement" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FBBF24?text=Image';">
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg">Inspiring Insights</h3>
+                                <p class="text-sm text-gray-400">Keys to success on and off the court.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 5: Event Image -->
+                    <div class="media-item card-hover" data-category="event">
+                        <div class="bg-gray-800 rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal(this)">
+                            <img src="https://placehold.co/600x400/1F2937/FBBF24?text=Pacers+Game" alt="Pacers Game Meet & Greet" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" >
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg">Pacers Meet & Greet</h3>
+                                <p class="text-sm text-gray-400">Networking with NBA professionals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 6: Video -->
+                    <div class="media-item card-hover" data-category="video">
+                        <div class="bg-gray-800 rounded-2xl overflow-hidden group cursor-pointer" onclick="openModal(this, true)">
+                            <div class="relative">
+                                <img src="https://placehold.co/600x400/111827/FBBF24?text=Student+Testimonial" alt="Student testimonial thumbnail" class="w-full h-64 object-cover">
+                                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white/80 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg">Student Testimonials</h3>
+                                <p class="text-sm text-gray-400">Hear from our participants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Events Section -->
+        <section id="events" class="py-20 md:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Signature <span class="gold-text">Experiences</span></h2>
+                    <p class="mt-2 text-lg text-gray-400">Unforgettable opportunities for our students.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Event 1 -->
+                    <div class="bg-gray-900 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold gold-text mb-4">Meet and Greet at Pacers Game</h3>
+                        <p class="text-gray-300">Students met NBA Players, skill development, and coaching staff, learning about all aspects of the game from the inside.</p>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="bg-gray-900 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold gold-text mb-4">Trip to the University Of Notre Dame</h3>
+                        <p class="text-gray-300">Students experienced a full campus tour, introductions to the Athletics Department, and spoke with Alumni about their journeys.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Ready to Build Your Future in Sports?</h2>
+                <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Connect with Coach Shep's to learn more about the B.O.S.S. program and how you can get involved.</p>
+                <a href="mailto:info@coachshep.com" class="mt-8 inline-block bg-amber-400 text-gray-900 font-bold py-4 px-10 rounded-lg text-lg hover:bg-amber-300 transition-colors">
+                    Contact Us
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 Coach Shep's & The B.O.S.S. Program. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Designed to Empower the Next Generation of Sports Professionals.</p>
+        </div>
+    </footer>
+
+    <!-- Image/Video Modal -->
+    <div id="modal" class="modal fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 hidden opacity-0">
+        <div id="modal-content" class="max-w-4xl max-h-full">
+            <!-- Content will be injected by JS -->
+        </div>
+        <button id="modal-close" class="absolute top-6 right-6 text-white text-4xl font-bold">&times;</button>
+    </div>
+
+    <script>
+        // --- Mobile Menu ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Media Hub Filtering ---
+        const filterButtons = document.querySelectorAll('#filter-buttons .filter-btn');
+        const mediaItems = document.querySelectorAll('#media-grid .media-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button style
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+
+                mediaItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- Modal Logic ---
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalClose = document.getElementById('modal-close');
+
+        function openModal(element, isVideo = false) {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            if (isVideo) {
+                // For a real site, you'd use a real video src
+                const videoSrc = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"; // Example video
+                modalContent.innerHTML = `
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="${videoSrc}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full rounded-lg"></iframe>
+                    </div>
+                `;
+            } else {
+                const imgSrc = element.querySelector('img').src;
+                const title = element.querySelector('h3').textContent;
+                modalContent.innerHTML = `
+                    <img src="${imgSrc}" alt="${title}" class="max-w-full max-h-[85vh] rounded-lg">
+                    <p class="text-center text-white mt-4 text-lg">${title}</p>
+                `;
+            }
+
+            // Use a timeout to allow the display property to apply before transitioning opacity
+            setTimeout(() => modal.classList.add('opacity-100'), 10);
+        }
+
+        function closeModal() {
+            modal.classList.remove('opacity-100');
+            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalContent.innerHTML = ''; // Clear content
+            }, 300); // Match transition duration
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            // Close modal if clicking on the background, but not on the content itself
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
