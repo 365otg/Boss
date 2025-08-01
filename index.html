@@ -17,6 +17,13 @@
         .gold-text {
             color: #FBBF24; /* amber-400 */
         }
+        /* Styles for the modal */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        body.modal-open {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="bg-black">
@@ -26,6 +33,8 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-3xl font-black tracking-wider gold-text">B.O.S.S.</a>
             <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-300 hover:gold-text transition-colors">About</a>
+                <a href="#gallery" class="text-gray-300 hover:gold-text transition-colors">Gallery</a>
                 <a href="#contact" class="text-gray-300 hover:gold-text transition-colors">Contact</a>
             </div>
             <a href="#contact" class="hidden md:inline-block bg-amber-400 text-gray-900 font-bold py-2 px-6 rounded-lg hover:bg-amber-300 transition-colors">
@@ -37,6 +46,8 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300 hover:gold-text transition-colors">About</a>
+            <a href="#gallery" class="block py-2 text-gray-300 hover:gold-text transition-colors">Gallery</a>
             <a href="#contact" class="block py-2 text-gray-300 hover:gold-text transition-colors">Contact</a>
             <a href="#contact" class="block mt-2 text-center bg-amber-400 text-gray-900 font-bold py-2 px-6 rounded-lg hover:bg-amber-300 transition-colors">Get Involved</a>
         </div>
@@ -46,24 +57,13 @@
         <!-- Main Attraction Video Section -->
         <section id="home" class="py-12 md:py-20">
             <div class="container mx-auto px-6 text-center">
-                <!-- Headline with adjusted size to fit on one line -->
                 <h1 class="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
                     <span class="gold-text">B</span>usiness <span class="gold-text">o</span>f <span class="gold-text">S</span>ports <span class="gold-text">S</span>ystems
                 </h1>
                  <p class="mt-2 mb-8 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
                     Transforming passion for sports into meaningful careers beyond the game.
                 </p>
-                <!-- Video container now takes full width of the parent container -->
                 <div class="w-full mx-auto aspect-video shadow-2xl shadow-amber-400/20">
-                    <!-- 
-                        The iframe src has been updated for a modern, seamless experience:
-                        - autoplay=1: Starts the video automatically (requires mute=1).
-                        - mute=1: Mutes the video on start.
-                        - loop=1&playlist=...: Loops the video continuously.
-                        - controls=0: Hides the default YouTube player controls for a sleek look.
-                        - rel=0: Prevents related videos from showing.
-                        - modestbranding=1: Reduces YouTube logo visibility.
-                    -->
                     <iframe 
                         class="w-full h-full rounded-xl" 
                         src="https://www.youtube.com/embed/I-P4naoKtlM?autoplay=1&mute=1&loop=1&playlist=I-P4naoKtlM&controls=0&rel=0&modestbranding=1&showinfo=0" 
@@ -76,8 +76,57 @@
             </div>
         </section>
 
+        <!-- About/Overview Section -->
+        <section id="about" class="py-20 md:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-left">
+                     <h2 class="text-3xl md:text-4xl font-bold mb-8">A Program <span class="gold-text">Unlike Any Other</span></h2>
+                     <p class="text-gray-300 mb-4 text-lg">B.O.S.S. (Business of Sports Systems) is a one-of-a-kind program created to help student-athletes transform their passion for sports into meaningful careers beyond high school, extending far beyond just being a player.</p>
+                     <p class="text-gray-300 mb-4 text-lg">Through workshops, discussions, and visits to local and regional sites, students explore a variety of career paths within the sports industry, gaining firsthand exposure to high-level roles and professional opportunities.</p>
+                     <p class="text-gray-300 text-lg">This program capitalizes on the strong network built by the executive team at Coach Shep’s, connecting participants with professional athletes, Division I, II, and III players and coaches, athletic directors, communications professionals, agents, and more.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Program <span class="gold-text">Experiences</span></h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Gallery Images -->
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                        <img src="https://img1.wsimg.com/isteam/ip/96389585-9ce3-4025-9b61-40adcb896a77/ND%201.jpg/:/cr=t:25.12%25,l:22.04%25,w:45.45%25,h:45.45%25/rs=w:1200,h:1600,cg:true,m" alt="B.O.S.S. Program participants at Notre Dame." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                        <img src="https://img1.wsimg.com/isteam/ip/96389585-9ce3-4025-9b61-40adcb896a77/ND%205.jpg/:/cr=t:0.27%25,l:8.96%25,w:80.65%25,h:80.65%25/rs=w:1200,h:1600,cg:true,m" alt="B.O.S.S. Program participants in a professional locker room." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                        <img src="https://img1.wsimg.com/isteam/ip/96389585-9ce3-4025-9b61-40adcb896a77/ND2.jpg/:/cr=t:1.63%25,l:21.83%25,w:70.42%25,h:70.42%25/rs=w:1200,cg:true,m" alt="B.O.S.S. Program participants in the Notre Dame Basketball auditorium." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                        <img src="https://img1.wsimg.com/isteam/ip/96389585-9ce3-4025-9b61-40adcb896a77/ND%203.jpg/:/cr=t:9.21%25,l:12.13%25,w:80.65%25,h:80.65%25/rs=w:1200,cg:true,m" alt="B.O.S.S. Program participants with a professional basketball player." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                         <img src="https://img1.wsimg.com/isteam/ip/96389585-9ce3-4025-9b61-40adcb896a77/Pacers%202-bd2e4ce.jpeg/:/cr=t:23.38%25,l:20.5%25,w:64.94%25,h:64.94%25/rs=w:1200,cg:true,m" alt="B.O.S.S. Program participants at a Pacers game." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                         <img src="https://img1.wsimg.com/isteam/ip/96389585-9ce3-4025-9b61-40adcb896a77/Pacers%20Courtside-aafb8ca.jpg/:/cr=t:21.91%25,l:21.91%25,w:56.18%25,h:56.18%25/rs=w:1200,cg:true,m" alt="B.O.S.S. Program participants sitting courtside." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                         <img src="https://img1.wsimg.com/isteam/ip/96389585-9ce3-4025-9b61-40adcb896a77/Pacers%203.jpg/:/cr=t:18.84%25,l:21.93%25,w:64.94%25,h:64.94%25/rs=w:1200,cg:true,m" alt="B.O.S.S. Program participants posing for a photo at a Pacers game." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                         <img src="https://img1.wsimg.com/isteam/ip/96389585-9ce3-4025-9b61-40adcb896a77/Pacers%204.jpg/:/cr=t:16.45%25,l:25.49%25,w:60.24%25,h:60.24%25/rs=w:1200,h:1600,cg:true,m" alt="B.O.S.S. Program participants enjoying the view from their seats." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+                         <img src="https://placehold.co/600x400/1F2937/FBBF24?text=Join+The+Program" alt="Placeholder for another B.O.S.S. Program experience." class="gallery-item w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-32 bg-gray-900">
+        <section id="contact" class="py-20 md:py-32 bg-gray-800">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold">Ready to Build Your Future in Sports?</h2>
                 <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Connect with Coach Shep's to learn more about the B.O.S.S. program and how you can get involved.</p>
@@ -88,7 +137,12 @@
         </section>
     </main>
 
-    <!-- The footer has been removed as requested -->
+    <!-- Modal HTML -->
+    <div id="image-modal" class="modal fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-80 p-4 z-50 opacity-0 pointer-events-none">
+        <span id="close-modal" class="absolute top-4 right-6 text-white text-4xl font-bold cursor-pointer hover:text-gray-400">&times;</span>
+        <img class="max-w-full max-h-full rounded-lg shadow-2xl" id="modal-image" src="" alt="Enlarged gallery image">
+    </div>
+
 
     <script>
         // --- Mobile Menu ---
@@ -100,12 +154,9 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // --- Close mobile menu when a link is clicked ---
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                // Check if the mobile menu is open before trying to close it
                 if (!mobileMenu.classList.contains('hidden')) {
-                    // Only close for links that navigate, not the main B.O.S.S. logo
                     if(link.href.includes('#')) {
                        mobileMenu.classList.add('hidden');
                     }
@@ -113,7 +164,6 @@
             });
         });
 
-        // --- Close mobile menu when clicking outside of it ---
         document.addEventListener('click', (event) => {
             const isClickInsideMenu = mobileMenu.contains(event.target);
             const isClickOnButton = mobileMenuButton.contains(event.target);
@@ -122,6 +172,44 @@
                 mobileMenu.classList.add('hidden');
             }
         });
+
+        // --- Image Modal ---
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.getElementById('close-modal');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                modal.style.opacity = '1';
+                modal.style.pointerEvents = 'auto';
+                modalImage.src = item.src;
+                document.body.classList.add('modal-open');
+            });
+        });
+
+        const closeTheModal = () => {
+            modal.style.opacity = '0';
+            modal.style.pointerEvents = 'none';
+            document.body.classList.remove('modal-open');
+        }
+
+        closeModal.addEventListener('click', closeTheModal);
+        
+        // Also close modal by clicking on the background
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeTheModal();
+            }
+        });
+
+        // Also close modal by pressing the Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") {
+                closeTheModal();
+            }
+        });
+
     </script>
 </body>
 </html>
